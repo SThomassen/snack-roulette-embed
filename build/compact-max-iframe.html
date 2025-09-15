@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Roulette - Compact Max Iframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 100%;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #ff6b6b;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .iframe-container iframe {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 600px;
+            max-width: 800px;
+        }
+        
+        .code-section {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 800px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e5e5;
+        }
+        
+        .code-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+        
+        .code-block code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .feature h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .feature p {
+            color: #666;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍿 Snack Roulette - Compact Max Size 🍿</h1>
+        
+        <div class="iframe-container">
+            <iframe 
+                src="embed.html?size=500&showControls=compact&title=" 
+                width="800" 
+                height="600" 
+                frameborder="0"
+                allowtransparency="true">
+            </iframe>
+        </div>
+        
+        <div class="code-section">
+            <h2>Embed Code</h2>
+            <p>Use this code to embed the compact roulette with maximum size and no title:</p>
+            
+            <div class="code-block">
+&lt;iframe 
+  src="embed.html?size=500&showControls=compact&title=" 
+  width="800" 
+  height="600" 
+  frameborder="0"
+  allowtransparency="true"&gt;
+&lt;/iframe&gt;
+            </div>
+            
+            <h3>Parameters Used:</h3>
+            <ul>
+                <li><strong>size=500</strong> - Maximum size (500px) for the roulette wheel</li>
+                <li><strong>showControls=compact</strong> - Compact controls with hamburger menu</li>
+                <li><strong>title=</strong> - Empty title (no title displayed)</li>
+            </ul>
+        </div>
+        
+        <div class="code-section">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>🎯 Compact Controls</h3>
+                    <p>Hamburger menu for snack selection, clean interface</p>
+                </div>
+                <div class="feature">
+                    <h3>📏 Maximum Size</h3>
+                    <p>500px wheel size for maximum visibility and impact</p>
+                </div>
+                <div class="feature">
+                    <h3>🚫 No Title</h3>
+                    <p>Clean appearance without title text</p>
+                </div>
+                <div class="feature">
+                    <h3>🎨 Custom Styling</h3>
+                    <p>Matches Cafetaria De Donk website colors</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="code-section">
+            <h2>Alternative Sizes</h2>
+            <p>You can adjust the size parameter for different use cases:</p>
+            
+            <div class="code-block">
+&lt;!-- Large (400px) --&gt;
+&lt;iframe src="embed.html?size=400&showControls=compact&title=" width="700" height="550" frameborder="0" allowtransparency="true"&gt;&lt;/iframe&gt;
+
+&lt;!-- Medium (300px) --&gt;
+&lt;iframe src="embed.html?size=300&showControls=compact&title=" width="600" height="500" frameborder="0" allowtransparency="true"&gt;&lt;/iframe&gt;
+
+&lt;!-- Small (250px) --&gt;
+&lt;iframe src="embed.html?size=250&showControls=compact&title=" width="500" height="450" frameborder="0" allowtransparency="true"&gt;&lt;/iframe&gt;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
