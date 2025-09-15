@@ -37,6 +37,14 @@
             font-family: 'Arial', sans-serif;
         }
         
+        .title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+        
         .roulette-container {
             position: relative;
             display: inline-block;
@@ -306,12 +314,14 @@
 <body>
     <div class="embed-container">
         <div class="compact-roulette" id="roulette-container">
+            <h1 id="title" class="title" style="display: none;"></h1>
+            
             <div class="roulette-container">
                 <canvas id="roulette-canvas" class="roulette-wheel"></canvas>
                 <div class="roulette-pointer"></div>
             </div>
             
-            <div class="controls-row">
+            <div id="controls-row" class="controls-row">
                 <button id="spin-button" class="spin-button">
                     Spin!
                 </button>
@@ -346,6 +356,8 @@
         // Configuration
         const CONFIG = {
             size: 300,
+            showControls: 'compact', // 'hidden' | 'compact' | 'full'
+            title: '🍿 Snack Roulette 🍿',
             snacks: [
                 'Kroket', 'Goulashkroket', 'Kalfskroket', 'Kwekkeboomkroket', 'Satekroket',
                 'Frikandel', 'Frikandel speciaal', 'Frikandel XXL', 'Frikandel XXL speciaal',
@@ -391,6 +403,29 @@
             const container = document.getElementById('roulette-container');
             container.style.width = CONFIG.size + 40 + 'px';
             container.style.height = CONFIG.size + 100 + 'px';
+            
+            // Handle title display
+            const titleElement = document.getElementById('title');
+            if (CONFIG.title && CONFIG.title.trim() !== '') {
+                titleElement.textContent = CONFIG.title;
+                titleElement.style.display = 'block';
+            } else {
+                titleElement.style.display = 'none';
+            }
+            
+            // Handle controls display
+            const controlsRow = document.getElementById('controls-row');
+            if (CONFIG.showControls === 'hidden') {
+                controlsRow.style.display = 'none';
+            } else if (CONFIG.showControls === 'compact') {
+                controlsRow.style.display = 'flex';
+                hamburgerButton.style.display = 'block';
+            } else if (CONFIG.showControls === 'full') {
+                controlsRow.style.display = 'flex';
+                hamburgerButton.style.display = 'none';
+                // For full mode, we'd need to add full snack selector below
+                // This is a simplified version for now
+            }
             
             // Setup event listeners
             spinButton.addEventListener('click', startRoulette);
@@ -587,6 +622,18 @@
             const size = urlParams.get('size');
             if (size && !isNaN(size)) {
                 CONFIG.size = Math.max(150, Math.min(500, parseInt(size)));
+            }
+            
+            // ShowControls parameter
+            const showControls = urlParams.get('showControls');
+            if (showControls && ['hidden', 'compact', 'full'].includes(showControls)) {
+                CONFIG.showControls = showControls;
+            }
+            
+            // Title parameter
+            const title = urlParams.get('title');
+            if (title !== null) {
+                CONFIG.title = title;
             }
             
             // Snacks parameter (comma-separated)
