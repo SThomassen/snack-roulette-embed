@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.838b01db.css",
-    "main.js": "/static/js/main.e636285c.js",
-    "index.html": "/index.html",
-    "main.838b01db.css.map": "/static/css/main.838b01db.css.map",
-    "main.e636285c.js.map": "/static/js/main.e636285c.js.map"
+    "main.css": "/snack-roulette-embed/static/css/main.838b01db.css",
+    "main.js": "/snack-roulette-embed/static/js/main.e636285c.js",
+    "index.html": "/snack-roulette-embed/index.html",
+    "main.838b01db.css.map": "/snack-roulette-embed/static/css/main.838b01db.css.map",
+    "main.e636285c.js.map": "/snack-roulette-embed/static/js/main.e636285c.js.map"
   },
   "entrypoints": [
     "static/css/main.838b01db.css",
