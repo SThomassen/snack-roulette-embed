@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/snack-roulette-embed/static/css/main.666d0310.css",
-    "main.js": "/snack-roulette-embed/static/js/main.b13ba463.js",
+    "main.js": "/snack-roulette-embed/static/js/main.7620081c.js",
     "index.html": "/snack-roulette-embed/index.html",
     "main.666d0310.css.map": "/snack-roulette-embed/static/css/main.666d0310.css.map",
-    "main.b13ba463.js.map": "/snack-roulette-embed/static/js/main.b13ba463.js.map"
+    "main.7620081c.js.map": "/snack-roulette-embed/static/js/main.7620081c.js.map"
   },
   "entrypoints": [
     "static/css/main.666d0310.css",
-    "static/js/main.b13ba463.js"
+    "static/js/main.7620081c.js"
   ]
 }
